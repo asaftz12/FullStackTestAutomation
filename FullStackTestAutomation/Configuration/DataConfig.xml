@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	
+	<!-- URL -->
+	<URL>https://www.wikipedia.org/</URL>
+	
+	<!-- Web -->
+	<BrowserType>chrome</BrowserType>
+	<ChromeDriverPath>./Drivers/chromedriver.exe</ChromeDriverPath>
+	<FFDriverPath>./Drivers/geckodriver.exe</FFDriverPath>
+	<IEDriverPath>./Drivers/IEDriverServer.exe</IEDriverPath>
+	
+	<!-- Reports -->
+	<ReportFilePath>C:/Automation/ProjectReports/</ReportFilePath>
+	<ReportFileName>TestExecution</ReportFileName>
+	<ScreenshotPath>C:/Automation/ProjectReports/</ScreenshotPath>
+	
+</Configuration>
