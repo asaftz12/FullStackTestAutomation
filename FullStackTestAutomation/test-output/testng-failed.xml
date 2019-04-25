@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.MortgageApp">
+      <class name="tests.Students">
         <methods>
-          <include name="test01_verifyRepayment"/>
           <include name="afterClass"/>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
+          <include name="test01_VerifyStudentCreated"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- tests.MortgageApp -->
+      </class> <!-- tests.Students -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
