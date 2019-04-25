@@ -2,7 +2,7 @@
 <Configuration>
 	
 	<!-- Type -->
-	<AutomationType>mobile</AutomationType> <!-- Web / Mobile / API / Desktop / Electron -->
+	<AutomationType>API</AutomationType> <!-- Web / Mobile / API / Desktop / Electron -->
 	
 	<!-- URL -->
 	<URL>https://www.wikipedia.org/</URL>
@@ -12,6 +12,18 @@
 	<ChromeDriverPath>./Drivers/chromedriver.exe</ChromeDriverPath>
 	<FFDriverPath>./Drivers/geckodriver.exe</FFDriverPath>
 	<IEDriverPath>./Drivers/IEDriverServer.exe</IEDriverPath>
+	
+	<!-- Mobile -->
+	<UDID>4df1fe0447e96f23</UDID>
+	<APP_PACKAGE>com.shivgadhia.android.ukMortgageCalc</APP_PACKAGE>
+	<APP_ACTIVITY>.MainActivity</APP_ACTIVITY>
+	<APPIUM_SERVER_ADDRESS>http://localhost:4723/wd/hub</APPIUM_SERVER_ADDRESS>
+	
+	<!-- API -->
+	<API_URL>http://localhost:9000</API_URL>
+	<API_RESOURCE>/student</API_RESOURCE>
+	
+	
 	
 	<!-- Reports -->
 	<ReportFilePath>C:/Automation/ProjectReports/</ReportFilePath>

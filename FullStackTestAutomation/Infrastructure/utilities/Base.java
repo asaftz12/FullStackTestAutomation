@@ -3,12 +3,16 @@ package utilities;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import org.json.simple.JSONObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.sikuli.script.Screen;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 //import pageObjects_wikipedia.*;
 
@@ -27,6 +31,10 @@ public class Base
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	
-	public static String timeStamp = new SimpleDateFormat("yyyy-MM-HH-mm-ss").format(Calendar.getInstance().getTime());
+	public static RequestSpecification httpRequest;
+	public static JSONObject requestParams = new JSONObject();
+	public static Response resp;
+	
+	public static String timeStamp = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(Calendar.getInstance().getTime());
 	
 }

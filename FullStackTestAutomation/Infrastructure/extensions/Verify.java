@@ -1,6 +1,7 @@
 package extensions;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
 import java.io.IOException;
@@ -50,6 +51,20 @@ public class Verify extends CommonOps
 			test.log(LogStatus.FAIL,"Failed to find image, see details: " + e + "See screenshot: "+ test.addScreenCapture(takeScreenshot()));
 			fail("Failed to find image");
 		}
-
+	}
+	
+	public static void contains(String response, String text)
+	{
+		try 
+		{
+			assertTrue(response.contains(text));
+			test.log(LogStatus.PASS,"Contains passed successfully.");
+		}
+		catch (AssertionError e)
+		{
+			test.log(LogStatus.FAIL,text + " is not contained in: " + response + ". see details: " + e);
+			fail(text + " is not contained, see details: " + e);
+		}
+		
 	}
 }
