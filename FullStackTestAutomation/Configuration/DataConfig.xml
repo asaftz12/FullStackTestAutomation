@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
 	
+	<!-- Type -->
+	<AutomationType>mobile</AutomationType> <!-- Web / Mobile / API / Desktop / Electron -->
+	
 	<!-- URL -->
 	<URL>https://www.wikipedia.org/</URL>
 	

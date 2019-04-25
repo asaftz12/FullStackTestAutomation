@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Asaftz\AppData\Local\Temp\testng-eclipse--286862842\testng-customsuite.xml</span>
+                    <span>C:\Users\Asaftz\AppData\Local\Temp\testng-eclipse-1427305382\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.Wikipedia" hash-for-method="test01_searchValue">test01_searchValue</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.MortgageApp" hash-for-method="test01_verifyRepayment">test01_verifyRepayment</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,18 +120,18 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">tests.Wikipedia</span>
+              <span class="class-name">tests.MortgageApp</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test01_searchValue">
-                  </a> <!-- test01_searchValue -->
-                  <span class="method-name">test01_searchValue</span>
-                  <div class="stack-trace">java.lang.AssertionError: Failed to find image
+                  <a name="test01_verifyRepayment">
+                  </a> <!-- test01_verifyRepayment -->
+                  <span class="method-name">test01_verifyRepayment</span>
+                  <div class="stack-trace">java.lang.AssertionError: Text NOT found in element
 	at org.testng.Assert.fail(Assert.java:96)
-	at extensions.Verify.image(Verify.java:51)
-	at tests.Wikipedia.test01_searchValue(Wikipedia.java:24)
+	at extensions.Verify.textInElement(Verify.java:37)
+	at tests.MortgageApp.test01_verifyRepayment(MortgageApp.java:21)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -166,7 +166,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Asaftz\AppData\Local\Temp\testng-eclipse--286862842\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Asaftz\AppData\Local\Temp\testng-eclipse-1427305382\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -175,7 +175,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.Wikipedia&quot;/&gt;
+      &lt;class name=&quot;tests.MortgageApp&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -217,14 +217,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test01_searchValue')
-data.setCell(0, 2, 'tests.Wikipedia')
-data.setCell(0, 3, 5379);
+data.setCell(0, 1, 'test01_verifyRepayment')
+data.setCell(0, 2, 'tests.MortgageApp')
+data.setCell(0, 3, 26543);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -250,28 +250,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.Wikipedia</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.MortgageApp</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void tests.Wikipedia.test01_searchValue() throws java.io.IOException,javax.xml.parsers.Parser...)</span>
-                <span class="method-start">5712 ms</span>
+                <span class="method-name">beforeMethod(public void tests.MortgageApp.test01_verifyRepayment() throws java.io.IOException,javax.xml.parsers....)</span>
+                <span class="method-start">11171 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">test01_searchValue</span>
-                <span class="method-start">5714 ms</span>
+                <span class="method-name">test01_verifyRepayment</span>
+                <span class="method-start">11173 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">11095 ms</span>
+                <span class="method-start">37718 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">11097 ms</span>
+                <span class="method-start">37719 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

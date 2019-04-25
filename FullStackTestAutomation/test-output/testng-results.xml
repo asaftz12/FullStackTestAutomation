@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11858" started-at="2019-03-09T13:29:10Z" finished-at="2019-03-09T13:29:22Z">
+  <suite name="Default suite" duration-ms="39281" started-at="2019-04-25T07:31:23Z" finished-at="2019-04-25T07:32:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11858" started-at="2019-03-09T13:29:10Z" finished-at="2019-03-09T13:29:22Z">
-      <class name="tests.Wikipedia">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.Wikipedia@14acaea5]" name="beforeClass" is-config="true" duration-ms="5708" started-at="2019-03-09T13:29:10Z" finished-at="2019-03-09T13:29:16Z">
+    <test name="Default test" duration-ms="39281" started-at="2019-04-25T07:31:23Z" finished-at="2019-04-25T07:32:02Z">
+      <class name="tests.MortgageApp">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.MortgageApp@10d59286]" name="beforeClass" is-config="true" duration-ms="11167" started-at="2019-04-25T07:31:23Z" finished-at="2019-04-25T07:31:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.Wikipedia@14acaea5]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2019-03-09T13:29:16Z" finished-at="2019-03-09T13:29:16Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.MortgageApp@10d59286]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2019-04-25T07:31:34Z" finished-at="2019-04-25T07:31:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.Wikipedia.test01_searchValue() throws java.io.IOException,javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXException,org.sikuli.script.FindFailed]]>
+                <![CDATA[public void tests.MortgageApp.test01_verifyRepayment() throws java.io.IOException,javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="test01_searchValue()[pri:0, instance:tests.Wikipedia@14acaea5]" name="test01_searchValue" duration-ms="5379" started-at="2019-03-09T13:29:16Z" finished-at="2019-03-09T13:29:21Z">
+        <test-method status="FAIL" signature="test01_verifyRepayment()[pri:0, instance:tests.MortgageApp@10d59286]" name="test01_verifyRepayment" duration-ms="26543" started-at="2019-04-25T07:31:34Z" finished-at="2019-04-25T07:32:00Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Failed to find image]]>
+              <![CDATA[Text NOT found in element]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Failed to find image
+              <![CDATA[java.lang.AssertionError: Text NOT found in element
 at org.testng.Assert.fail(Assert.java:96)
-at extensions.Verify.image(Verify.java:51)
-at tests.Wikipedia.test01_searchValue(Wikipedia.java:24)
+at extensions.Verify.textInElement(Verify.java:37)
+at tests.MortgageApp.test01_verifyRepayment(MortgageApp.java:21)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -62,16 +62,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test01_searchValue -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.Wikipedia@14acaea5]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-03-09T13:29:21Z" finished-at="2019-03-09T13:29:21Z">
+        </test-method> <!-- test01_verifyRepayment -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.MortgageApp@10d59286]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-04-25T07:32:00Z" finished-at="2019-04-25T07:32:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.Wikipedia@14acaea5]" name="afterClass" is-config="true" duration-ms="755" started-at="2019-03-09T13:29:21Z" finished-at="2019-03-09T13:29:22Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.MortgageApp@10d59286]" name="afterClass" is-config="true" duration-ms="1557" started-at="2019-04-25T07:32:00Z" finished-at="2019-04-25T07:32:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- tests.Wikipedia -->
+      </class> <!-- tests.MortgageApp -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

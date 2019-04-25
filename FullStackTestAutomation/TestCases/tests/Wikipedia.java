@@ -21,7 +21,7 @@ public class Wikipedia extends CommonOps
 	{
 		Web_WikipediaSearch.go("Asaf Tzabari", "Simple English");
 		Verify.textInElement(wikiResults.resultField, "There were no results matching the query.");
-		Verify.image("./ImageRepository/facebookLogo.png");
+		Verify.image("./ImageRepository/wikiLogo.png");
 	}
 
 }

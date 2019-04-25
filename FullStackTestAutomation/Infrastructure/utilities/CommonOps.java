@@ -3,6 +3,8 @@ package utilities;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -26,6 +28,10 @@ import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 import com.relevantcodes.extentreports.ExtentReports;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.remote.MobileCapabilityType;
 
 public class CommonOps extends Base
 {
@@ -73,6 +79,15 @@ public class CommonOps extends Base
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		screen = new Screen();
 	}
+	
+	public static void initMobile() throws MalformedURLException
+	{
+        dc.setCapability(MobileCapabilityType.UDID, "4df1fe0447e96f23");
+        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.shivgadhia.android.ukMortgageCalc");
+        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
+        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
 
 	/**
 	 * This method initializes the Chrome WebDriver
@@ -87,7 +102,7 @@ public class CommonOps extends Base
 		WebDriver driver = new ChromeDriver();
 		return driver;
 	}
-	
+
 	/**
 	 * This method initializes the Firefox WebDriver
 	 * @return Firefox WebDriver
@@ -127,7 +142,7 @@ public class CommonOps extends Base
 	public static void instanceReport() throws ParserConfigurationException, SAXException, IOException
 	{
 		extent = new ExtentReports(getData("ReportFilePath") + "Execution_" + timeStamp + "/" + getData("ReportFileName")+".html");
-		
+
 	}
 
 	/**
@@ -156,7 +171,7 @@ public class CommonOps extends Base
 		extent.flush();
 		extent.close();
 	}
-	
+
 	public static String takeScreenshot () throws IOException, ParserConfigurationException, SAXException 
 	{
 		String screenshotPath = getData("ScreenshotPath") + "Execution_" + timeStamp + "/" + "screenshot_" + getRandomNumber () + ".png";
@@ -165,22 +180,29 @@ public class CommonOps extends Base
 		FileUtils.copyFile(scrFile, new File(screenshotPath));
 		return screenshotPath;
 	}
-	
+
 	public static int getRandomNumber () 
 	{
 		Random rand = new Random();
 		return rand.nextInt(9999999) + 1;
 	}
-	
-	
-	
+
+
+
 	@BeforeClass
 	public void beforeClass() throws ParserConfigurationException, SAXException, IOException 
 	{
-		initBrowser(getData("BrowserType"));
+		if (getData("AutomationType").toLowerCase().equals("web"))
+		{
+			initBrowser(getData("BrowserType"));
+		}
+		if (getData("AutomationType").toLowerCase().equals("mobile"))
+		{
+			initMobile();
+		}
 		ManagePages.init();
 		instanceReport();
-		
+
 	}
 
 	@AfterClass
