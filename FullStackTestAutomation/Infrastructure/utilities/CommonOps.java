@@ -16,8 +16,13 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.winium.DesktopOptions;
+import org.openqa.selenium.winium.WiniumDriver;
+import org.openqa.selenium.winium.WiniumDriverService;
 import org.sikuli.script.Screen;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -93,6 +98,34 @@ public class CommonOps extends Base
 	{
 		RestAssured.baseURI = getData("API_URL");
 		httpRequest = RestAssured.given();
+	}
+	
+	public static void initElectronDriver(String app) throws ParserConfigurationException, SAXException, IOException
+	{
+		System.setProperty("webdriver.chrome.driver",getData("ElectronDriverPath"));	
+		ChromeOptions opt = new ChromeOptions();
+		opt.setBinary(app);
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("ChromeOptions", opt);
+		capabilities.setBrowserName("chrome");
+		driver = new ChromeDriver(capabilities);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	}
+	
+	public static void initDesktopDriver(String app) throws IOException, InterruptedException, ParserConfigurationException, SAXException
+	{
+		DesktopOptions options = new DesktopOptions(); 
+		options.setApplicationPath(app); 
+		File drivePath = new File(getData("DesktopDriverPath")); 
+		WiniumDriverService service = new WiniumDriverService.Builder().
+				usingDriverExecutable(drivePath).
+				usingPort(9999).
+				withVerbose(true).
+				withSilent(false).
+				buildDesktopService();
+		service.start(); 
+		driver = new WiniumDriver(service, options);
+		Thread.sleep(1000);
 	}
 	
 	/**
@@ -196,7 +229,7 @@ public class CommonOps extends Base
 
 
 	@BeforeClass
-	public void beforeClass() throws ParserConfigurationException, SAXException, IOException 
+	public void beforeClass() throws ParserConfigurationException, SAXException, IOException, InterruptedException 
 	{
 		if (getData("AutomationType").toLowerCase().equals("web"))
 		{
@@ -209,6 +242,14 @@ public class CommonOps extends Base
 		else if (getData("AutomationType").toLowerCase().equals("api"))
 		{
 			initAPI();
+		}
+		else if (getData("AutomationType").toLowerCase().equals("electron"))
+		{
+			initElectronDriver(getData("ElectronDriverPath"));
+		}
+		else if (getData("AutomationType").toLowerCase().equals("desktop"))
+		{
+			initDesktopDriver(getData("DesktopApplication"));
 		}
 		ManagePages.init();
 		instanceReport();

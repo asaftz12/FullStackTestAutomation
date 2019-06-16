@@ -13,5 +13,9 @@ public class ManagePages extends Base
 		wikiResults = PageFactory.initElements(driver, pageObjects_wikipedia.ResultsPage.class);
 	
 		mortgageMain = PageFactory.initElements(driver, pageObjects_Mortgage.MainPage.class);
+		
+		electronMain = PageFactory.initElements(driver, pageObjects_Electron.MainPage.class);
+		
+		calcMain = PageFactory.initElements(driver, pageObjects_calculator.MainPage.class);
 	}
 }

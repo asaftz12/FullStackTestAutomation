@@ -23,7 +23,10 @@ public class Verify extends CommonOps
 		try 
 		{
 			// Can implement ExplicitlyWait here
-			assertEquals(element.getText(),expectedValue);
+			if (getData("AutomationType").toLowerCase().equals("desktop"))
+				assertEquals(element.getAttribute("Name"), expectedValue);
+			else
+				assertEquals(element.getText(), expectedValue);
 			test.log(LogStatus.PASS,"Text found in element successfully.");
 		}
 		catch (Exception e) 

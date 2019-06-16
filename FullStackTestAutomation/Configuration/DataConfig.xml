@@ -2,7 +2,7 @@
 <Configuration>
 	
 	<!-- Type -->
-	<AutomationType>API</AutomationType> <!-- Web / Mobile / API / Desktop / Electron -->
+	<AutomationType>Desktop</AutomationType> <!-- Web / Mobile / API / Desktop / Electron -->
 	
 	<!-- URL -->
 	<URL>https://www.wikipedia.org/</URL>
@@ -10,6 +10,7 @@
 	<!-- Web -->
 	<BrowserType>chrome</BrowserType>
 	<ChromeDriverPath>./Drivers/chromedriver.exe</ChromeDriverPath>
+	<ChromeDriverPath74>./Drivers/chromedriver74.exe</ChromeDriverPath74>
 	<FFDriverPath>./Drivers/geckodriver.exe</FFDriverPath>
 	<IEDriverPath>./Drivers/IEDriverServer.exe</IEDriverPath>
 	
@@ -23,7 +24,13 @@
 	<API_URL>http://localhost:9000</API_URL>
 	<API_RESOURCE>/student</API_RESOURCE>
 	
+	<!-- Electron -->
+	<ElectronApp>C:/Automation/Electron_Demo/Electron.exe</ElectronApp>
+	<ElectronDriverPath>./Drivers/Electron_chromedriver6.exe</ElectronDriverPath>
 	
+	<!-- Desktop -->
+	<DesktopDriverPath>./Drivers/DesktopDriver.exe</DesktopDriverPath>
+	<DesktopApplication>C:/Windows/System32/calc.exe</DesktopApplication>
 	
 	<!-- Reports -->
 	<ReportFilePath>C:/Automation/ProjectReports/</ReportFilePath>

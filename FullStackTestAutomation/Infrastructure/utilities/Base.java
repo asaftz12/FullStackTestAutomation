@@ -27,6 +27,8 @@ public class Base
 	public static pageObjects_wikipedia.ResultsPage wikiResults;
 	public static pageObjects_Mortgage.MainPage mortgageMain;
 	
+	public static pageObjects_Electron.MainPage electronMain;
+	public static pageObjects_calculator.MainPage calcMain;
 	
 	public static ExtentReports extent;
 	public static ExtentTest test;

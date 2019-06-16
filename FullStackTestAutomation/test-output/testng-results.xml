@@ -1,40 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1378" started-at="2019-04-25T09:17:38Z" finished-at="2019-04-25T09:17:40Z">
+  <suite name="Default suite" duration-ms="19119" started-at="2019-05-13T13:39:23Z" finished-at="2019-05-13T13:39:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1378" started-at="2019-04-25T09:17:38Z" finished-at="2019-04-25T09:17:40Z">
-      <class name="tests.Students">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.Students@281e3708]" name="beforeClass" is-config="true" duration-ms="407" started-at="2019-04-25T09:17:38Z" finished-at="2019-04-25T09:17:39Z">
+    <test name="Default test" duration-ms="19119" started-at="2019-05-13T13:39:23Z" finished-at="2019-05-13T13:39:43Z">
+      <class name="tests.Calculator">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.Calculator@4e4aea35]" name="beforeClass" is-config="true" duration-ms="2369" started-at="2019-05-13T13:39:23Z" finished-at="2019-05-13T13:39:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.Students@281e3708]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2019-04-25T09:17:39Z" finished-at="2019-04-25T09:17:39Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.Calculator@4e4aea35]" name="beforeMethod" is-config="true" duration-ms="3" started-at="2019-05-13T13:39:26Z" finished-at="2019-05-13T13:39:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.Students.test01_VerifyStudentCreated() throws javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXException,java.io.IOException]]>
+                <![CDATA[public void tests.Calculator.test01_Verify1Plus2() throws java.io.IOException,javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="test01_VerifyStudentCreated()[pri:0, instance:tests.Students@281e3708]" name="test01_VerifyStudentCreated" duration-ms="792" started-at="2019-04-25T09:17:39Z" finished-at="2019-04-25T09:17:40Z">
+        <test-method status="FAIL" signature="test01_Verify1Plus2()[pri:0, instance:tests.Calculator@4e4aea35]" name="test01_Verify1Plus2" duration-ms="16570" started-at="2019-05-13T13:39:26Z" finished-at="2019-05-13T13:39:42Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Error with finding text]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Error with finding text
+at org.testng.Assert.fail(Assert.java:96)
+at extensions.Verify.textInElement(Verify.java:35)
+at tests.Calculator.test01_Verify1Plus2(Calculator.java:20)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test01_VerifyStudentCreated -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.Students@281e3708]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-04-25T09:17:40Z" finished-at="2019-04-25T09:17:40Z">
+        </test-method> <!-- test01_Verify1Plus2 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.Calculator@4e4aea35]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-05-13T13:39:42Z" finished-at="2019-05-13T13:39:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.Students@281e3708]" name="afterClass" is-config="true" duration-ms="162" started-at="2019-04-25T09:17:40Z" finished-at="2019-04-25T09:17:40Z">
+        <test-method status="FAIL" signature="afterClass()[pri:0, instance:tests.Calculator@4e4aea35]" name="afterClass" is-config="true" duration-ms="164" started-at="2019-05-13T13:39:42Z" finished-at="2019-05-13T13:39:43Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Process has exited, so the requested information is not available. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 162 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DESKTOP-QH5IRLG', ip: '192.168.12.50', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.winium.WiniumDriver
+Capabilities [{app=C:/Windows/System32/calc.exe, args=, innerPort=9998, debugConnectToRunningApp=false, keyboardSimulator=1, launchDelay=0, platform=ANY}]
+Session ID: AwesomeSession]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Process has exited, so the requested information is not available. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 162 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DESKTOP-QH5IRLG', ip: '192.168.12.50', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.winium.WiniumDriver
+Capabilities [{app=C:/Windows/System32/calc.exe, args=, innerPort=9998, debugConnectToRunningApp=false, keyboardSimulator=1, launchDelay=0, platform=ANY}]
+Session ID: AwesomeSession
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:526)
+at utilities.CommonOps.afterClass(CommonOps.java:263)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- tests.Students -->
+      </class> <!-- tests.Calculator -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
